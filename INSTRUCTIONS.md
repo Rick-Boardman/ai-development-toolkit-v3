@@ -184,6 +184,58 @@ When resuming work after interruption:
 
 ---
 
+## Task Addition Protocol
+
+When the user explicitly adds a task (especially high-priority items), follow the **dual-recording approach**:
+
+### Dual Recording Steps
+
+1. **Immediate**: Add to `manage_todo_list` tool for active session tracking
+
+   - Use for tasks you'll work on immediately or in current session
+   - Provides real-time visibility during conversation
+   - Helps track multi-step implementation progress
+
+2. **Persistent**: Add to `.adt/project-context/tasks.md` under appropriate priority
+   - Ensures task survives the session
+   - Makes it visible to other developers and AI agents
+   - Contributes to queue health monitoring
+   - Required for multi-agent coordination
+
+### When to Use Each System
+
+**Use `manage_todo_list` only:**
+
+- Breaking down work you're actively doing right now
+- Temporary planning for current session
+- Implementation steps for a task already in `tasks.md`
+
+**Use `tasks.md` only:**
+
+- Recording ideas for future work
+- Tasks you're not starting immediately
+- Updating existing task status or claims
+
+**Use BOTH (dual-recording):**
+
+- User explicitly assigns you a high-priority task
+- You're starting work on a task from `tasks.md` immediately
+- Converting a user request into actionable work
+
+### Example Flow
+
+```
+User: "Add this as highest priority to your todo list: Fix the login bug"
+
+AI Response:
+1. Add to manage_todo_list (for immediate tracking)
+2. Add to tasks.md under "⚡ High Priority"
+3. Confirm both recordings with user
+4. Begin work if user expects immediate action
+```
+
+---
+
 ## User Feedback Handling
 
 When receiving user feedback or new requirements:
