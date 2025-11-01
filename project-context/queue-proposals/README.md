@@ -24,7 +24,7 @@ Human reviews proposals, marks for approval/rejection/modification
 
 ### 4. Queue Replenishment
 
-Approved tasks are added to `tasks.md`
+Approved tasks are added to `.adt/project-context/tasks.md`
 
 ## Proposal File Naming
 
@@ -98,9 +98,9 @@ Good proposals should have:
 
 ## After Review
 
-1. Add approved tasks to `tasks.md` under appropriate priority
+1. Add approved tasks to `.adt/project-context/tasks.md` under appropriate priority
 2. Archive proposal file (keep for reference)
-3. Update queue health status in `tasks.md`
+3. Update queue health status in `.adt/project-context/tasks.md`
 
 ---
 

@@ -7,9 +7,9 @@ This directory contains the living documentation for this project. These files a
 **New to the project?**
 
 1. Read this file (you are here)
-2. Check `status.md` for current state
-3. Review `tasks.md` for priorities
-4. Look at recent entries in `session-log.md`
+2. Check `.adt/project-context/status.md` for current state
+3. Review `.adt/project-context/tasks.md` for priorities
+4. Look at recent entries in `.adt/project-context/session-log.md`
 5. Start working!
 
 ## File Guide

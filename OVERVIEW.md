@@ -33,7 +33,7 @@
 
 ### Documentation Files (Root)
 
-**README.md** (Main guide)
+**.adt/README.md** (Main guide)
 
 - What the system is
 - Quick start instructions
@@ -41,14 +41,14 @@
 - Usage examples
 - Philosophy and approach
 
-**INTEGRATION-GUIDE.md** (Setup guide)
+**.adt/INTEGRATION-GUIDE.md** (Setup guide)
 
 - Installation instructions
 - Integration with existing projects
 - Configuration options
 - Examples and tips
 
-**START-HERE.md** (Quick start)
+**.adt/START-HERE.md** (Quick start)
 
 - Navigation hub
 - 30-second overview
@@ -57,7 +57,7 @@
 
 ### Copilot Instructions
 
-**INSTRUCTIONS.md** (Referenced from your project)
+**.adt/INSTRUCTIONS.md** (Referenced from your project)
 
 - Defines development workflow
 - Code quality standards
@@ -289,8 +289,8 @@ Simple, maintainable workflows
 
 **Immediate action:**
 
-1. Read `README.md` for full overview
-2. Follow `INSTALLATION.md` to set up
+1. Read `.adt/README.md` for full overview
+2. Follow `.adt/INTEGRATION-GUIDE.md` to set up
 3. Customize templates for your project
 4. Start using with your team
 
@@ -312,7 +312,7 @@ Simple, maintainable workflows
 
 ## Get Started
 
-1. Read [INTEGRATION-GUIDE.md](INTEGRATION-GUIDE.md) for installation
+1. Read [INTEGRATION-GUIDE.md](.adt/INTEGRATION-GUIDE.md) for installation
 2. Customize context files for your project
 3. Start tracking tasks and decisions
 4. Let the queue management system keep work flowing

@@ -10,13 +10,13 @@ A lightweight context management system for GitHub Copilot that helps AI agents 
 
 ### New to the System?
 
-1. **[OVERVIEW.md](OVERVIEW.md)** - What's included and how it works
-2. **[README.md](README.md)** - Complete documentation
-3. **[INTEGRATION-GUIDE.md](INTEGRATION-GUIDE.md)** - Add to your project
+1. **[OVERVIEW.md](.adt/OVERVIEW.md)** - What's included and how it works
+2. **[README.md](.adt/README.md)** - Complete documentation
+3. **[INTEGRATION-GUIDE.md](.adt/INTEGRATION-GUIDE.md)** - Add to your project
 
 ### Ready to Use It?
 
-1. Copy as `.adt/` to your project (see [INTEGRATION-GUIDE.md](INTEGRATION-GUIDE.md))
+1. Copy as `.adt/` to your project (see [INTEGRATION-GUIDE.md](.adt/INTEGRATION-GUIDE.md))
 2. Add one reference line to your `.github/copilot-instructions.md`
 3. Customize context files in `.adt/project-context/`
 4. Start working
@@ -93,11 +93,11 @@ your-project/
 
 | Document                 | Purpose                    | Read When                 |
 | ------------------------ | -------------------------- | ------------------------- |
-| **START-HERE.md**        | Navigation hub (this file) | First time                |
-| **OVERVIEW.md**          | System overview            | Want to see what's inside |
-| **README.md**            | Complete documentation     | Ready to use it           |
-| **INTEGRATION-GUIDE.md** | How to add to your project | Ready to install          |
-| **INSTRUCTIONS.md**      | Copilot workflow guide     | Understanding workflows   |
+| **.adt/START-HERE.md**        | Navigation hub (this file) | First time                |
+| **.adt/OVERVIEW.md**          | System overview            | Want to see what's inside |
+| **.adt/README.md**            | Complete documentation     | Ready to use it           |
+| **.adt/INTEGRATION-GUIDE.md** | How to add to your project | Ready to install          |
+| **.adt/INSTRUCTIONS.md**      | Copilot workflow guide     | Understanding workflows   |
 
 ---
 
@@ -105,13 +105,13 @@ your-project/
 
 ### Phase 1: Understand (10 minutes)
 
-1. Read this file (START-HERE.md) ✓ You're here
-2. Skim [OVERVIEW.md](OVERVIEW.md) - See what's included
-3. Read [README.md](README.md) - Complete documentation
+1. Read this file (.adt/START-HERE.md) ✓ You're here
+2. Skim [OVERVIEW.md](.adt/OVERVIEW.md) - See what's included
+3. Read [README.md](.adt/README.md) - Complete documentation
 
 ### Phase 2: Install (5 minutes)
 
-1. Follow [INTEGRATION-GUIDE.md](INTEGRATION-GUIDE.md)
+1. Follow [INTEGRATION-GUIDE.md](.adt/INTEGRATION-GUIDE.md)
 2. Copy as `.adt/` to your project
 3. Add one reference line to your copilot-instructions.md
 4. Customize context files
@@ -162,13 +162,13 @@ your-project/
 
 ## 📞 Quick Help
 
-**Can't find something?** Check [OVERVIEW.md](OVERVIEW.md) for system breakdown
+**Can't find something?** Check [OVERVIEW.md](.adt/OVERVIEW.md) for system breakdown
 
-**Want full details?** Read [README.md](README.md) for complete documentation
+**Want full details?** Read [README.md](.adt/README.md) for complete documentation
 
-**Installation help?** See [INTEGRATION-GUIDE.md](INTEGRATION-GUIDE.md) for step-by-step guide
+**Installation help?** See [INTEGRATION-GUIDE.md](.adt/INTEGRATION-GUIDE.md) for step-by-step guide
 
-**Understanding workflows?** Read [INSTRUCTIONS.md](INSTRUCTIONS.md) for Copilot workflows
+**Understanding workflows?** Read [INSTRUCTIONS.md](.adt/INSTRUCTIONS.md) for Copilot workflows
 
 ---
 
@@ -176,9 +176,9 @@ your-project/
 
 **Right now:**
 
-- Continue to [OVERVIEW.md](OVERVIEW.md) for system overview
-- Or jump to [README.md](README.md) for full documentation
-- Or go straight to [INTEGRATION-GUIDE.md](INTEGRATION-GUIDE.md) to install
+- Continue to [OVERVIEW.md](.adt/OVERVIEW.md) for system overview
+- Or jump to [README.md](.adt/README.md) for full documentation
+- Or go straight to [INTEGRATION-GUIDE.md](.adt/INTEGRATION-GUIDE.md) to install
 
 **Within a week:**
 
@@ -198,7 +198,7 @@ your-project/
 
 **You're all set.** Choose your path above and start exploring!
 
-📖 Full docs → [README.md](README.md)
-🎯 System overview → [OVERVIEW.md](OVERVIEW.md)
-⚙️ Install now → [INTEGRATION-GUIDE.md](INTEGRATION-GUIDE.md)
+📖 Full docs → [README.md](.adt/README.md)
+🎯 System overview → [OVERVIEW.md](.adt/OVERVIEW.md)
+⚙️ Install now → [INTEGRATION-GUIDE.md](.adt/INTEGRATION-GUIDE.md)
 ````

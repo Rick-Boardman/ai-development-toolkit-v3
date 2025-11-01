@@ -177,18 +177,18 @@ Your project-specific context (tasks, decisions, sessions) is preserved.
 
 You don't need everything:
 
-1. Start with just `tasks.md` (task queue)
-2. Add `decisions.md` when making important decisions
-3. Add `session-log.md` for team handoffs
-4. Add `active-agents.md` when working with multiple agents
+1. Start with just `.adt/project-context/tasks.md` (task queue)
+2. Add `.adt/project-context/decisions.md` when making important decisions
+3. Add `.adt/project-context/session-log.md` for team handoffs
+4. Add `.adt/project-context/active-agents.md` when working with multiple agents
 
 ### Customize Freely
 
 It's just markdown files:
 
-- Adjust queue thresholds in `check-queue.ps1`
+- Adjust queue thresholds in `.adt/project-context/check-queue.ps1`
 - Add custom context files
-- Modify workflows in `INSTRUCTIONS.md`
+- Modify workflows in `.adt/INSTRUCTIONS.md`
 - Remove features you don't need
 
 ### Keep Your Rules Separate

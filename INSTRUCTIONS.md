@@ -41,43 +41,43 @@ This is a software development project that uses structured context files for te
 
 ## Context Files Location
 
-All project context is maintained in the `project-context/` directory:
+All project context is maintained in the `.adt/project-context/` directory:
 
-- **`README.md`** - Project overview, setup, and getting started
-- **`status.md`** - Current development state and active work
-- **`tasks.md`** - Priority task queue with completion tracking and agent claiming
-- **`decisions.md`** - Technical decisions with rationale
-- **`session-log.md`** - Development session history
-- **`active-agents.md`** - Agent registry and coordination status (for multi-agent work)
-- **`work-partitions.md`** - Work area assignments and conflict prevention (for multi-agent work)
+- **`.adt/project-context/README.md`** - Project overview, setup, and getting started
+- **`.adt/project-context/status.md`** - Current development state and active work
+- **`.adt/project-context/tasks.md`** - Priority task queue with completion tracking and agent claiming
+- **`.adt/project-context/decisions.md`** - Technical decisions with rationale
+- **`.adt/project-context/session-log.md`** - Development session history
+- **`.adt/project-context/active-agents.md`** - Agent registry and coordination status (for multi-agent work)
+- **`.adt/project-context/work-partitions.md`** - Work area assignments and conflict prevention (for multi-agent work)
 
 ## Development Workflow
 
 ### Starting Work
 
-1. **Register as active agent**: Add yourself to `project-context/active-agents.md` if not already present
-2. **Check work partitions**: Review `project-context/work-partitions.md` for area assignments and conflicts
-3. **Check current status**: Review `project-context/status.md` and `project-context/tasks.md`
-4. **Pick a task**: Select unclaimed task from priority queue in `tasks.md`
+1. **Register as active agent**: Add yourself to `.adt/project-context/active-agents.md` if not already present
+2. **Check work partitions**: Review `.adt/project-context/work-partitions.md` for area assignments and conflicts
+3. **Check current status**: Review `.adt/project-context/status.md` and `.adt/project-context/tasks.md`
+4. **Pick a task**: Select unclaimed task from priority queue in `.adt/project-context/tasks.md`
 5. **Claim the task**: Update task with your agent ID in `Claimed` field
 6. **Mark in progress**: Change `[ ]` to `[>]` when actively working
-7. **Start session**: Log session start in `session-log.md` with timestamp and goal
+7. **Start session**: Log session start in `.adt/project-context/session-log.md` with timestamp and goal
 
 ### During Development
 
-1. **Update agent status**: Keep `active-agents.md` current with your status (Active/Paused/Blocked)
-2. **Document decisions**: Add any significant technical decisions to `decisions.md` with rationale
-3. **Update progress**: Mark task progress in `tasks.md` as you work
-4. **Track blockers**: Note any blockers or dependencies in `status.md`
-5. **Watch for conflicts**: Check `work-partitions.md` if touching shared resources
+1. **Update agent status**: Keep `.adt/project-context/active-agents.md` current with your status (Active/Paused/Blocked)
+2. **Document decisions**: Add any significant technical decisions to `.adt/project-context/decisions.md` with rationale
+3. **Update progress**: Mark task progress in `.adt/project-context/tasks.md` as you work
+4. **Track blockers**: Note any blockers or dependencies in `.adt/project-context/status.md`
+5. **Watch for conflicts**: Check `.adt/project-context/work-partitions.md` if touching shared resources
 
 ### Completing Work
 
-1. **Update task status**: Mark task as complete `[x]` in `tasks.md`
+1. **Update task status**: Mark task as complete `[x]` in `.adt/project-context/tasks.md`
 2. **Release claim**: Task completion automatically releases the claim
-3. **Log session**: Add session summary to `session-log.md` with accomplishments
-4. **Update status**: Reflect changes in `status.md`
-5. **Update agent registry**: Mark yourself Complete or Paused in `active-agents.md`
+3. **Log session**: Add session summary to `.adt/project-context/session-log.md` with accomplishments
+4. **Update status**: Reflect changes in `.adt/project-context/status.md`
+5. **Update agent registry**: Mark yourself Complete or Paused in `.adt/project-context/active-agents.md`
 
 ## Queue Management System
 
@@ -85,7 +85,7 @@ This project uses an innovative queue health monitoring system to prevent task q
 
 ### Queue Health Monitoring
 
-Tasks in `tasks.md` are categorized by priority:
+Tasks in `.adt/project-context/tasks.md` are categorized by priority:
 
 - 🔥 **Critical** - Must be done immediately
 - ⚡ **High** - Important, do soon
@@ -103,17 +103,17 @@ Tasks in `tasks.md` are categorized by priority:
 
 When task queue runs low:
 
-1. **AI Detects Low Queue**: Copilot notices few remaining tasks in `tasks.md`
-2. **AI Generates Proposals**: Create proposals in `project-context/queue-proposals/` with:
+1. **AI Detects Low Queue**: Copilot notices few remaining tasks in `.adt/project-context/tasks.md`
+2. **AI Generates Proposals**: Create proposals in `.adt/project-context/queue-proposals/` with:
    - Context-aware task suggestions
    - Priority recommendations with rationale
    - Effort estimates and dependencies
 3. **Human Reviews**: Human reviews proposals, approves/modifies/rejects
-4. **Queue Replenishment**: Approved tasks added to `tasks.md`
+4. **Queue Replenishment**: Approved tasks added to `.adt/project-context/tasks.md`
 
 ### Proposal Format
 
-When generating task proposals, use this structure in `project-context/queue-proposals/YYYY-MM-DD-proposals.md`:
+When generating task proposals, use this structure in `.adt/project-context/queue-proposals/YYYY-MM-DD-proposals.md`:
 
 ```markdown
 ## Proposal: [Task Title]
@@ -189,8 +189,8 @@ When resuming work after interruption:
 When receiving user feedback or new requirements:
 
 1. **Don't implement immediately** - Understand and plan first
-2. **Document requirements** in `decisions.md` with rationale
-3. **Create task proposals** in queue-proposals directory
+2. **Document requirements** in `.adt/project-context/decisions.md` with rationale
+3. **Create task proposals** in `.adt/project-context/queue-proposals/` directory
 4. **Wait for human review** before implementing
 5. **Update context files** throughout implementation
 
@@ -198,17 +198,17 @@ When receiving user feedback or new requirements:
 
 When discovering bugs or issues:
 
-1. **Document in `status.md`** under "Known Issues"
+1. **Document in `.adt/project-context/status.md`** under "Known Issues"
 2. **Create task proposal** for non-critical bugs
-3. **For critical bugs**: Fix immediately but document decision in `decisions.md`
+3. **For critical bugs**: Fix immediately but document decision in `.adt/project-context/decisions.md`
 4. **Update tests** to prevent regression
 
 ## Integration with VS Code
 
 This project may have VS Code tasks configured. Use:
 
-- `pwsh project-context/check-queue.ps1` - Check queue health
-- `pwsh project-context/propose-tasks.ps1` - Generate AI task proposals
+- `pwsh .adt/project-context/check-queue.ps1` - Check queue health
+- `pwsh .adt/project-context/propose-tasks.ps1` - Generate AI task proposals
 
 ## Technology Preferences
 
@@ -230,7 +230,7 @@ This system is designed to work seamlessly for **1 to N agents** without configu
 
 When starting work (even as solo agent):
 
-- Add yourself to `project-context/active-agents.md`
+- Add yourself to `.adt/project-context/active-agents.md`
 - Use format: `agent-<timestamp>` or `<username>-<context>` as your ID
 - Update status field as work progresses (Active/Paused/Blocked/Complete)
 
@@ -238,20 +238,20 @@ When starting work (even as solo agent):
 
 **Before starting any task:**
 
-1. Verify task shows `Claimed: Unassigned` in `tasks.md`
+1. Verify task shows `Claimed: Unassigned` in `.adt/project-context/tasks.md`
 2. Update `Claimed` field with your agent ID
 3. Change checkbox from `[ ]` to `[>]` when actively working
 4. When complete, mark `[x]` (this releases the claim automatically)
 
 **If task already claimed:**
 
-- Check `active-agents.md` to see if claiming agent is still active
+- Check `.adt/project-context/active-agents.md` to see if claiming agent is still active
 - If agent is Paused/Blocked >30min, task may be available for handoff
 - Add handoff note in task before claiming
 
 ### Partition Awareness
 
-Check `work-partitions.md` before starting work:
+Check `.adt/project-context/work-partitions.md` before starting work:
 
 - **Assigned Partition**: If partition assigned to you, you have full ownership
 - **Shared Resources**: Check list before modifying shared files (config, types, docs)
@@ -262,15 +262,15 @@ Check `work-partitions.md` before starting work:
 
 - **Read before edit**: Check file modification time before editing
 - **Granular commits**: Commit frequently to reduce merge conflicts
-- **Communication**: Update `active-agents.md` status when switching focus
+- **Communication**: Update `.adt/project-context/active-agents.md` status when switching focus
 - **Partition respect**: Don't modify files in another agent's partition without coordination
 
 ### Coordination Frequency
 
-- **Update `active-agents.md`**: Every session start/end, status change
-- **Check `tasks.md` claims**: Before picking new task
-- **Review `work-partitions.md`**: When starting new feature area
-- **Monitor `session-log.md`**: Check recent entries to see what others are doing
+- **Update `.adt/project-context/active-agents.md`**: Every session start/end, status change
+- **Check `.adt/project-context/tasks.md` claims**: Before picking new task
+- **Review `.adt/project-context/work-partitions.md`**: When starting new feature area
+- **Monitor `.adt/project-context/session-log.md`**: Check recent entries to see what others are doing
 
 ### Solo Agent Mode
 

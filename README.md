@@ -21,7 +21,7 @@ Work with GitHub Copilot's native capabilities:
 
 ## Quick Start
 
-See [INTEGRATION-GUIDE.md](INTEGRATION-GUIDE.md) for complete installation instructions.
+See [INTEGRATION-GUIDE.md](.adt/INTEGRATION-GUIDE.md) for complete installation instructions.
 
 ### 3-Step Installation
 
@@ -49,7 +49,7 @@ The system is self-contained in `.adt/` and integrates via a single reference li
 
 ### 📊 Queue Health Monitoring
 
-The task queue in `tasks.md` maintains a healthy backlog of work:
+The task queue in `.adt/project-context/tasks.md` maintains a healthy backlog of work:
 
 ```powershell
 # Check queue health
@@ -86,7 +86,7 @@ Human reviews and approves proposals before adding to queue.
 
 ### 📝 Decision Documentation
 
-Technical decisions are documented in `decisions.md` with:
+Technical decisions are documented in `.adt/project-context/decisions.md` with:
 
 - **Context**: Why the decision was needed
 - **Decision**: What was decided
@@ -98,7 +98,7 @@ This helps future developers (and AI) understand **why** things are the way they
 
 ### 📖 Session Logs
 
-Development sessions are tracked in `session-log.md` for:
+Development sessions are tracked in `.adt/project-context/session-log.md` for:
 
 - Team handoffs between developers
 - Understanding what happened when
@@ -146,7 +146,7 @@ GitHub Copilot automatically reads `.github/copilot-instructions.md` and underst
 
 **AI Responsibilities:**
 
-- Register in `active-agents.md` when starting work
+- Register in `.adt/project-context/active-agents.md` when starting work
 - Read context files before starting work
 - Claim tasks before working on them
 - Update progress in context files
@@ -260,7 +260,7 @@ But these are optional - the system works fine without them.
 ```text
 1. GitHub Copilot automatically reads .github/copilot-instructions.md
 2. Register in .adt/project-context/active-agents.md
-3. Review .adt/project-context/status.md and tasks.md
+3. Review .adt/project-context/status.md and .adt/project-context/tasks.md
 4. Claim an unclaimed task (update Claimed field)
 5. Mark task in-progress with [>]
 6. Update context files as you work
@@ -283,7 +283,7 @@ pwsh .adt/project-context/propose-tasks.ps1
 
 ### Documenting Decisions
 
-When making a significant technical decision, add to `decisions.md`:
+When making a significant technical decision, add to `.adt/project-context/decisions.md`:
 
 ```markdown
 ### 2025-11-01 - Use Redis for Rate Limiting
@@ -313,7 +313,7 @@ When making a significant technical decision, add to `decisions.md`:
 
 ### Team Handoffs
 
-End your session in `session-log.md`:
+End your session in `.adt/project-context/session-log.md`:
 
 ```markdown
 ### 2025-11-01 - Implement Rate Limiting
@@ -345,7 +345,7 @@ End your session in `session-log.md`:
 
 ### Adjust Queue Thresholds
 
-Edit `check-queue.ps1` to change thresholds:
+Edit `.adt/project-context/check-queue.ps1` to change thresholds:
 
 ```powershell
 $criticalStatus = if ($criticalCount -ge 2) { "✅" } else { "⚠️" }  # Was ≥1
